@@ -1,0 +1,31 @@
+﻿@page
+@model OfficeModel
+@{
+
+	var caddress = OfficeModel.caddress;
+	var crooms = OfficeModel.crooms;
+
+}
+<div class="text-center">
+	<h1 class="display-4">Welcome</h1>
+	<p>Office</p>
+	<form method="post" >
+		<div>
+			@*<span>Address:</span>
+			<input type="text" id="in_address" name="in_address" value="@ViewData[crooms]" />
+			<span>Rooms:</span>
+			<input type="text" id="in_rooms" name="in_rooms" value="@ViewData[caddress]" />*@
+			<span>Address:</span>
+			<input type="text" id="address" name="in_address" value="@ViewData[crooms]" />
+			<span>Rooms:</span>
+			<input type="text" id="rooms" name="in_rooms" value="@ViewData[caddress]" />
+			<button type="submit" id="send">Send</button>
+			@*<p>=====================</p>
+			<p>@ViewData[caddress]</p>
+			<p>@ViewData[crooms]</p>*@
+			@*<p>@ho1</p>
+		<p>@hoa</p>
+		<p>@hor</p>*@
+		</div>	
+	</form>	
+</div>

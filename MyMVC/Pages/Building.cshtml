@@ -1,0 +1,43 @@
+﻿@page
+@model BuildingModel
+@{
+	var l1 = Model.land;
+	var o1 = Model.OnPagesList;
+}
+<div class="text-center">
+	<h1 class="display-4">Welcome</h1>
+	<p>Building</p>
+	<form method="post">
+		<div class="container">
+			<div class="form-group row" style="max-width:50rem; text-align:left">
+				<label class="col-sm-3 col-form-label" asp-for="land.Address"></label>
+				<input class="col-sm-3 form-control" type="text" asp-for="land.Address" />
+				<span class="col-sm-6 col-form-label " asp-validation-for="land.Address"></span>
+			</div>
+			<div class="form-group row" style="max-width:50rem; text-align:left">
+				<label class="col-sm-3 col-form-label" asp-for=@l1.Landping></label>
+				<input class="col-sm-3 form-control" type="text" asp-for=@l1.Landping />
+				<span class="col-sm-6 col-form-label " asp-validation-for=@l1.Landping></span>
+			</div>
+			<div class="form-group row" style="max-width:50rem; text-align:left">
+				<label class="col-sm-3 col-form-label" asp-for=@l1.Owner></label>
+				<input class="col-sm-3 form-control" type="text" asp-for=@l1.Owner />
+			</div>
+			<div class="form-group row">
+				<button class="btn-sm" type="submit" id="send">Send</button>
+			</div>
+		</div>
+	</form>
+</div>
+@*<div class="form-group" >
+		@foreach (Onpageitem pageitem in o1)
+		{
+			<p>@pageitem.times</p>
+			<p>@pageitem.items</p>
+		}
+	</div>*@
+
+@section Scripts
+	{
+	@{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

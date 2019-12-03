@@ -1,0 +1,24 @@
+﻿@page
+@model ThoroughModel
+@{
+	 ThoroughModel.House1 house = Model.house;
+}
+<div class="text-center">
+	<h1 class="display-4">Welcome</h1>
+	<p>Thorough</p>
+	<form method="post">
+		<div>
+			<span>Address:</span>
+			<input type="text" id="address" name="address" value="@ViewData["rooms"]" />
+			<span>Rooms:</span>
+			<input type="text" id="rooms" name="rooms" value="@ViewData["address"]" />			
+			<button type="submit" id="send">Send</button>
+			@*<p>=====================</p>
+			<p>@ViewData["address"]</p>
+			<p>@ViewData["rooms"]</p>*@
+			@*<p>=====================</p>
+			<p>ADDRESS: @house.Address</p>
+			<p>ROOMs: @house.Rooms</p>*@
+		</div>
+	</form>
+</div>
